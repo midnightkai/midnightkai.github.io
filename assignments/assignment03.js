@@ -37,6 +37,8 @@ elem[17] = document.getElementById("17");
 
 elem[18] = document.getElementById("18");
 
+elem[19] = document.getElementById("totals");
+
 //add
 elem[1].children[4].children[0].onclick = function(){add1(elem[1]);};
 
@@ -76,7 +78,6 @@ elem[18].children[4].children[0].onclick = function(){add1(elem[18]);};
 
 //sub
 elem[1].children[4].children[1].onclick = function(){sub1(elem[1]);};
-
 
 elem[2].children[4].children[1].onclick = function(){sub1(elem[2]);};
 
@@ -149,6 +150,9 @@ elem[17].children[4].children[2].onclick = function(){clear1(elem[17]);};
 
 elem[18].children[4].children[2].onclick = function(){clear1(elem[18]);};
 
+//total
+elem[19].children[4].children[0].onclick = function(){total(elem[19]);};
+
 
 function add1 (elem) {
   if(elem.children[2].innerHTML == "-") {
@@ -184,5 +188,25 @@ function sub1 (elem) {
 function clear1 (elem) {
     elem.children[2].innerHTML = "-";
     elem.children[3].innerHTML = "-";
+}
 
+function total (elem) {
+  let scoreTotal = 0;
+  let overTotal = 0;
+    for (var i = 0; i < elem.length; i++) {
+      if (elem[i].children[2].innerHTML == "-"){
+        scoreTotal = scoreTotal + 0;
+        overTotal = overTotal + 0;
+      }
+      else {
+        let score = elem[i].chilren[2].innerHTML;
+        score = Number.parseInt(score);
+        scoreTotal = scoreTotal + score;
+        let over = elem[i].chilren[3].innerHTML;
+        over = Number.parseInt(over);
+        overTotal = overTotal + over;
+      }
+    }
+  elem.children[2].innerHTML = scoreTotal;
+  elem.children[3].innerHTML = overTotal;
 }
