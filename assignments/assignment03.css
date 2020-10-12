@@ -35,3 +35,10 @@ h1 {
   border:none;
   border-radius: 4px;
 }
+
+.btn-total {
+  background-color: Violet;
+  color:white;
+  border:none;
+  border-radius: 4px;
+}
