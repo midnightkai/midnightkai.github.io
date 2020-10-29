@@ -47,11 +47,24 @@
 	// retrieve the "clubs" array
 	let clubs = JSON.parse(localStorage.getItem('clubs'));
 	// display the full clubName of the user-chosen club
-	let newClubName ;
+	let newClubName;
 	let newClubDistances;
 	
 	function addClub() {
-        // your code here
+		newClubName = document.getElementsByTagName("input")[0].value;
+		newClubDistances = 0;
+		clubs[clubs.length] = JSON.parse(JSON.stringify(clubs[clubs.length- 1]));
+		clubs[clubs.length-1][2] = newClubName;
+		clubs[clubs.length-1][1] = JSON.stringify(newClubName).charAt(1);
+		for(i = 3; i < 7; i++){
+		clubs[clubs.length-1][i] = newClubDistances;
+		}
+		let str = JSON.stringify(clubs);
+		localStorage.setItem("clubs", str);
+		
+			if (clubs.length > 14) {
+		window.alert("Warning: you are only allowed to carry 14 clubs in your golf bag in match play competition.");
+	}
 	}
 	
 	// navigate to club distance LIST screen
