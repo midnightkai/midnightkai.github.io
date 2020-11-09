@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Minimial HTML</title>
+      <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="assignment05.js"></script>
+    </head>
+      
+<body>
+<div class ="container">
+  <div class="row">
+    <div class="col-md-6">
+<canvas onload="loadContent()" id="myChart"></canvas>
+<button type="button" onclick="loadContent()">Load Covid-19 Content</button>
+    </div>
+    <div class="col-md-6">
+  <h1>Covid-19</h1>
+  <p>
+    <em>"The COVID-19 pandemic, also known as the coronavirus pandemic, is an ongoing pandemic of coronavirus disease 2019 (COVID-19) caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), first identified in December 2019 in Wuhan, China." (<a href="https://en.wikipedia.org/wiki/Coronavirus_disease_201">Wikipedia</a>)<em>
+      </p>
+        </div>
+    </div>
+</div>
+<!-- ChartJS: https://www.chartjs.org/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 
+<!-- Lodash: https://lodash.com/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+
+<!-- Day.js: https://day.js.org/docs/en/installation/browser -->
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script>
+  dayjs().format();
+  console.log(dayjs().format("YYYY-MM-DD"));
+
+</script>
+  </body>
+  </html>
