@@ -131,6 +131,5 @@ function processForm(){
 
 
 //things to fix:
-//error message displaying no matter what
-//table only updating if tabbing from first box
+//error message displaying no matter what => validation must not be working right
 //payment table not complete because angular is not understood
