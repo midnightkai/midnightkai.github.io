@@ -56,6 +56,12 @@ $(document).ready(function(){
   $("#loan_year01").blur( function() {
     updateLoansArray();
   });
+  $("#loan_amt01").blur( function() {
+    updateLoansArray();
+  });
+  $("#loan_int01").blur( function() {
+    updateLoansArray();
+  });
   
   
     
@@ -122,3 +128,9 @@ loans[i].loan_amount = loans[0].loan_amount.toFixed(2);
 function processForm(){
   //????
 }
+
+
+//things to fix:
+//error message displaying no matter what
+//table only updating if tabbing from first box
+//payment table not complete because angular is not understood
